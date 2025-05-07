@@ -21,50 +21,31 @@ This project is particularly well-suited for educational purposes and for those 
 ---
 
 ## Install dependencies
-# Debian/Ubuntu
+
+### Debian/Ubuntu
+```bash
 sudo apt update
 sudo apt install libfuse-dev build-essential
-
-# Arch Linux
+```
+### Arch Linux
+```bash
 sudo pacman -S fuse2
-
+```
 ## 🛠 Build & Run
-# Clone the repo:
+### Clone the repo:
 git clone https://github.com/yourusername/myfuse.git
 cd myfuse
-# Build the project:
+### Build the project:
 ./build.sh
-# Create a mount point and run:
+### Create a mount point and run:
 mkdir /tmp/myfs
 ./myfs /tmp/myfs
-# Unmount:
+### Unmount:
 fusermount -u /tmp/myfs
-
-## Example Usage
+### Example Usage
 cd /tmp/myfs
 
-# List directory contents
-ls
-# Output: file.txt
-
-# Read a file
-cat file.txt
-# Output: [initial contents or empty]
-
-# Write to a file
-echo "Hello from FUSE!" > file.txt
-
-# Read it back
-cat file.txt
-# Output: Hello from FUSE!
-
-# Create new files dynamically
-touch test1.txt
-echo "This is a new file." > test1.txt
-cat test1.txt
-
 # 📂 Code Structure
-
 - **`fuse_main_v2.c`** – Main implementation file containing all FUSE callbacks.  
 - **`Makefile`** – Used to compile the project.  
 - **`README.md`** – This file.
@@ -81,17 +62,16 @@ cat test1.txt
 | `myfs_create`  | Creates new files dynamically       |
 
 ## 🌐 SEO Keywords
-
 FUSE file system, Linux custom filesystem, FUSE tutorial, write your own file system,  
 C filesystem project, educational file system, Linux filesystem in C, in-memory filesystem,  
 filesystem from scratch, libfuse example, filesystem programming, FUSE create file,  
 FUSE C example, FUSE beginners guide, FUSE memory file system.
 
-# 🧾 License
+## 🧾 License
 MIT License. See LICENSE for more details.
 
-# 🤝 Contributing
+## 🤝 Contributing
 Pull requests and issues are welcome! If you're learning FUSE, feel free to fork this repository and experiment.
 
-# ⭐ Support
+## ⭐ Support
 If you find this project useful, please ⭐ star the repository to support continued development and visibility.
